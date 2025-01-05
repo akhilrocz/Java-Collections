@@ -17,14 +17,24 @@ public static void main(String[] args) {
     hashMap.put(2,"Nikhil");
     hashMap.put(3,"Raju");
 
+    System.out.println(hashMap.get(4));  //returns value if value exist, else returns null
 
+    System.out.println(hashMap.containsKey(1));   //containsKey returns true or false
+    System.out.println(hashMap.containsKey(4));
 
 
     System.out.println("map elements "+hashMap);  //{1=Akhil, 2=Nikhil 3=Raju}
     System.out.println("Entry set view: "+hashMap.entrySet());  //output [1=Akhil, 2=Nikhil 3=Raju]
 
+System.out.println("Hashmap "+hashMap);
 
+Set<Integer> keys =  hashMap.keySet();  //set of keys
+System.out.println(keys); //returns a set of keys
 
+    for(int key:hashMap.keySet()){
+        String val = hashMap.get(key);
+        System.out.println(key + " "+val);
+    }
 }
 
 }
